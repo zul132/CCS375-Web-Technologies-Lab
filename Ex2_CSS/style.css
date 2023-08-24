@@ -1,0 +1,13 @@
+.navMenu { 
+    color:#f6ebb4; 
+    font-size: x-large; 
+    display:inline-block; 
+    margin-left: 0px;
+    margin-right:50px; 
+    padding-bottom: 20px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left:15px;
+}
