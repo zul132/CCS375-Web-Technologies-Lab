@@ -1,29 +1,33 @@
-<script language="javascript">
-    function validate()
-    {
-        var flag=1;
-        if(document.myform.id.value==""||document.myform.pwd.value=="")
-        {
-            flag=0;
-        }
-        if(flag==1)
-        {
-            alert("Login Successful");
-        }
-        else
-        {
-            alert("INVALID INPUT");
-            document.myform.focus();
-        }
-    }
-</script>
-<form name="myform">
-    <div align="center">
-        EMAIL ID (LIST email):<input type="text" name="id"><br> <br>
-        PASSWORD:<input type="password" name="pwd"><br><br>
-    </div>
-    <br><br>
-    <div align="center">
-    <input type="submit" value="ok" onClick="validate()">&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="reset" value="clear" >
-</form>
+<html>
+    <body><br><br><br>
+        <script language="javascript">
+            function validate()
+            {
+                //Validating whether the input fields are filled
+                if(document.myform.email.value == "" || document.myform.pwd.value == "")
+                {
+                    alert("Invalid Input: Email and Password must be filled out!");
+                    return false;
+                }
+                //Validating whether email is of valid format
+                if(String(document.myform.email.value).indexOf("@") == -1 )
+                {
+                    alert("Invalid Input: Please enter a valid email address!");
+                    return false;
+                }
+                alert("Logged In Successfully");
+                return true;
+            }
+        </script>
+        <form name="myform" action="profile.html" onsubmit="return validate()" method="post">
+            <div align="center">
+                Enter your LIST Email ID: <input type="text" name="email"><br> <br>
+                Enter your Password : <input type="password" name="pwd"><br><br>
+            </div>
+            <br><br>
+            <div align="center">
+            <input type="submit" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="reset" value="clear" >
+        </form>
+    </body>
+</html>
