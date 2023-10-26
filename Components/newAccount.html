@@ -1,5 +1,33 @@
 <html>
-    <body>
-        
+    <body><br><br><br>
+        <script language="javascript">
+            function validate()
+            {
+                //Validating whether all the input fields are filled
+                if (document.createform.stdname.value == "" ||)
+            }
+        </script>
+        <form name="createform" action="login.html" onsubmit="return validate()" method="post">
+            <div align="center">
+                Enter Student Name: <input type="text" name="stdname">
+                <br><br>
+                Enter Student Email: <input type="email" name="email">
+                <br><br>
+                Enter Password (min 8 characters): <input type="password" name="pwd1">
+                <br><br>
+                Confirm Password: <input type="password" name="pwd2">
+                <br><br>
+                Enter Phone number: <input type="text" name="phoneno">
+                <br><br>
+                Enter Year of Study: <input type="number" name="year" min="1" max="4">
+                <br><br>
+                Enter DOB: <input type="date" name="dob">
+                <br><br>
+            </div>
+            <div align="center">
+                <input type="submit" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="reset" value="clear" >
+            </div>
+        </form>
     </body>
 </html>
