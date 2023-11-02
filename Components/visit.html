@@ -3,18 +3,49 @@
         <script language="javascript">
             function validate()
             {
-                
+                //Validating whether phone number is of valid format
+                if (String(document.visitform.phoneno.value).length != 10 || isNaN(document.visitform.phoneno.value))
+                {
+                    alert("Invalid input: Please enter a valid phone number!")
+                    return false;
+                }
+                alert("Thank you for booking! Our team will contact you regarding the visit shortly")
+                return true;
             }
         </script>
-        <form name="myform" action="profile.html" onsubmit="return validate()" method="post">
+
+        <div align="center">
+            <h2>Visit our Campus</h2>
+            <p>Interested in admitting your ward in our institution? Book a visit to our college for further consulting and Check out our Facilities</p>
+            <p>For admission consultancy only: pay ₹25</p>
+            <p>For campus tour: pay ₹50</p>
+        </div>
+        <br>
+        <p></p>
+        <form name="visitform" action="visit.html" onsubmit="return validate()" method="post">
             <div align="center">
-                Enter your LIST Email ID: <input type="text" name="email"><br> <br>
-                Enter your Password (min 8 characters): <input type="password" name="pwd"><br><br>
+                <h3>Payment Form</h3>
+                <h4>Contact details</h4>
+                Enter your email id:  <input type="email" name="email" required>
+                <br><br>
+                Enter your phone number: <input type="text" name="phoneno" required>
+                <br><br>
+                Choose an option: 
+                <input type="radio" name="options" id="optn1" value="₹25">
+                <label for="optn1">Admission Consultancy</label>
+                <input type="radio" name="options" id="optn2" value="₹50">
+                <label for="optn2">Campus Tour</label>
+                <br>
+
+                <h4>Payment Proof</h4>
+                <p>Pay to UPI Number: +91 75500 15333</p>
+                Upload your payment proof(e.g. Screenshot):
+                <input type="file" name="proof" accept="image/png, image/jpeg, image/jpg" required>
+                <br><br>
             </div>
-            <br><br>
             <div align="center">
-            <input type="submit" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="reset" value="clear" >
+                <input type="submit" value="Submit">&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="reset" value="clear" >
             </div>
         </form>
     </body>
