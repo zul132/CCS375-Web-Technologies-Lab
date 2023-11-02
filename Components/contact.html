@@ -1,0 +1,35 @@
+<html>
+    <body><br><br><br>
+        <script language="javascript">
+            function validate()
+            {
+                alert("Thank you for sending us a message. Our team will process your query and send you a response shortly");
+                return true;
+            }
+        </script>
+        <div align="center">
+            <p>Thank you for your interest in LIST's academic programs. Please provide the following information about your requirements to help us serve you better. This information will enable us to route your request to the appropriate person. You should receive a response within 48 hours.
+            </p>
+            <form name="contactform" action="contact.html" onsubmit="return validate()" method="post">
+                <label for="name">Enter your name:</label>
+                <input name="name" type="text" placeholder="Your Name" size="25" required>
+                <br><br>
+                <label for="email">Enter your email:</label>
+                <input name="email" type="email" placeholder="Your Email" size="25" required>
+                <br><br>
+                <label for="options">What kind of message would you like to send us? Please choose an option:</label>
+                <select name="options" required>
+                    <option value="1">Admission Query</option>
+                    <option value="2">Placement/Internship Collaboration</option>
+                    <option value="3">MoU/Partnership Proposal</option>
+                    <option value="4">Other queries</option>
+                </select> 
+                <br><br>
+                <label for="msg">Describe your query:</label>
+                <input name="msg" type="text" placeholder="Your message (optional)" size="100">
+                <br><br>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </body>
+</html>
