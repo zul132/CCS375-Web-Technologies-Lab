@@ -4,7 +4,29 @@
             function validate()
             {
                 //Validating whether all the input fields are filled
-                if (document.createform.stdname.value == "" ||)
+                if (document.createform.stdname.value == "" || document.createform.email.value == "" || document.createform.pwd1.value == "" || document.createform.pwd2.value == "" || document.createform.phoneno.value == "" || document.createform.year.value == "" || document.createform.dob.value == "" )
+                {
+                    alert("All fields must be filled!");
+                    return false;
+                } 
+                //Validating whether the password is atleast 8 characters long
+                if (String(document.createform.pwd1.value).length < 8)
+                {
+                    alert("Invalid Input: Password must have minimum 8 characters!");
+                    return false;
+                }
+                //Validating whether the confirm password matches the entered password
+                if (document.createform.pwd1.value !== document.createform.pwd2.value)
+                {
+                    alert("Error: Confirm password and Entered password don't match!")
+                    return false;
+                }
+                 //Validating whether phone number is of valid format
+                if (String(document.createform.phoneno.value).length != 10 || isNaN(document.createform.phoneno.value))
+                {
+                    alert("Invalid input: Please enter a valid phone number!")
+                    return false;
+                }
             }
         </script>
         <form name="createform" action="login.html" onsubmit="return validate()" method="post">

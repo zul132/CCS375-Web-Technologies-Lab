@@ -6,18 +6,18 @@
                 //Validating whether the input fields are filled
                 if(document.myform.email.value == "" || document.myform.pwd.value == "")
                 {
-                    alert("Invalid Input: Email and Password must be filled out!");
+                    alert("Email and Password must be filled!");
                     return false;
                 }
                 //Validating whether email is of valid format
                 if(String(document.myform.email.value).indexOf("@") == -1 )
                 {
-                    alert("Invalid Input: Please enter a valid email address!");
+                    alert("Invalid input: Email should contain an '@' followed by a domain!");
                     return false;
                 }
                 if(String(document.myform.pwd.value).length < 8)
                 {
-                    alert("Invalid Input: Password must have minimum 8 characters!");
+                    alert("Invalid input: Password must have minimum 8 characters!");
                     return false;
                 }
                 alert("Logged In Successfully");
