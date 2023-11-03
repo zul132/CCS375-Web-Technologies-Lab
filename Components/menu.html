@@ -1,15 +1,49 @@
+<!DOCTYPE html>
 <html>
-<body bgcolor="yellow">
-<form align="center">
-    <button type="button"><a href="content.html" target=content><font color="black">Home Page</font></a></li></button>
-    <br /><br />
-    <button type="button"><a href="login.html" target=content><font color="black">Student Login</font></a></li></button>
-    <br /><br />
-    <button type="button"><a href="newAccount.html" target=content><font color="black">New Account</font></a></li></button>
-    <br /><br />
-    <button type="button"><a href="contact.html" target=content><font color="black">Contact Us</font></a></li></button>
-    <br /><br />
-    <button type="button"><a href="visit.html" target=content><font color="black">Visit LIST</font></a></li></button>
-</form>
+<head>
+    <style>
+        body {
+            background-color: #f6ebb4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            font-size: medium;
+            background-color: #2f2e87;
+            padding: 10px 20px; 
+            margin: 20px; 
+            border: none; 
+        }
+        button a {
+            color: whitesmoke;
+            text-decoration: none; 
+        }
+        button:hover {
+            background-color: whitesmoke;
+            cursor: pointer;
+        }
+        button:hover a {
+            color: #2f2e87;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button type="button"><a href="content.html" target="content">Home Page</a></button>
+        <button type="button"><a href="login.html" target="content">Student Login</a></button>
+        <button type="button"><a href="newAccount.html" target="content">New Account</a></button>
+        <button type="button"><a href="contact.html" target="content">Contact Us</a></button>
+        <button type="button"><a href="visit.html" target="content">Visit LIST</a></button>
+    </div>
 </body>
 </html>
